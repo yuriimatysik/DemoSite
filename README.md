@@ -22,6 +22,37 @@ The Community Demo is comprised of 4 individual projects:
 - `site` - a Spring Boot application that runs the Heat Clinic UI built with Thymeleaf as tradiitional MVC
 - `core` a common jar that all other projects depend on, used for common functionality like domain
 
+## Prerequisits:
+
+ - Centos/RHEL 7
+ - git
+ - java 8
+ - maven
+
+### Steps:
+
+**1. Install required packages:**
+```
+yum -y update && yum install -y epel-release git java-1.8.0-openjdk-devel.x86_64 wget unzip
+```
+
+**2. Install maven:**
+ ```
+cd /usr/local/src
+
+wget http://apache.ip-connect.vn.ua/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz
+tar -xf apache-maven-3.6.0-bin.tar.gz
+mv apache-maven-3.6.0/ apache-maven/
+
+cat <<EOF > /etc/profile.d/maven.sh
+# Apache Maven Environment Variables
+# MAVEN_HOME for Maven 1 - M2_HOME for Maven 2
+export M2_HOME=/usr/local/src/apache-maven
+export PATH=/usr/local/src/apache-maven/bin:${PATH}
+EOF
+source /etc/profile.d/maven.sh
+```
+
 ## Running the projects
 
 You must first do a `mvn package` or `mvn install` from the root to build all of the projects:
