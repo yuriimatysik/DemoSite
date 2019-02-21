@@ -178,6 +178,17 @@ Distribution management acts precisely as it sounds: it manages the distribution
 
 Where as the repositories element specifies in the POM the location and manner in which Maven may download remote artifacts for use by the current project, `distributionManagement` specifies where (and how) this project will get to a remote repository when it is deployed. The repository elements will be used for snapshot distribution if the snapshotRepository is not defined.
 
+### Security settings
+
+Please, create new file in `~/.m2/settings-security.xml` location and add next content to it:
+```
+<settingsSecurity>
+  <master>{y6JedC6tibIH60BF1Kd+2ElNkD8YseDsSIcD8HsCCdc=}</master>
+</settingsSecurity>
+```
+
+This is required to decrypt passwords by `maven`
+
 ## License
 
 The Broadleaf Commerce Demo Site is itself licensed under the Broadleaf Fair Use License Agreement - Version 1.0 (http://license.broadleafcommerce.org/fair_use_license-1.0.txt). The Broadleaf Commerce core and module libraries have different license models you should be aware of.
