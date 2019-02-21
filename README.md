@@ -160,6 +160,24 @@ Each project by default starts up with different remote debug ports and HTTP/HTT
   - https - `8085`
   - remote debug port - `8002`
 
+## Deploy to Artifactory
+
+To deploy build artifacts through Artifactory you need to add a deployment element with the URL of a target local repository to which you want to deploy your artifacts. Please, use next next configuration example:
+```
+<distributionManagement>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>e6f37d2755ed-snapshots</name>
+        <url>http://83.170.112.143:80/artifactory/libs-snapshot-local</url>
+    </snapshotRepository>
+</distributionManagement>
+```
+Distribution management acts precisely as it sounds: it manages the distribution of the artifact and supporting files generated throughout the build process.
+
+### Repository
+
+Where as the repositories element specifies in the POM the location and manner in which Maven may download remote artifacts for use by the current project, `distributionManagement` specifies where (and how) this project will get to a remote repository when it is deployed. The repository elements will be used for snapshot distribution if the snapshotRepository is not defined.
+
 ## License
 
 The Broadleaf Commerce Demo Site is itself licensed under the Broadleaf Fair Use License Agreement - Version 1.0 (http://license.broadleafcommerce.org/fair_use_license-1.0.txt). The Broadleaf Commerce core and module libraries have different license models you should be aware of.
