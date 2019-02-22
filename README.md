@@ -160,6 +160,27 @@ Each project by default starts up with different remote debug ports and HTTP/HTT
   - https - `8085`
   - remote debug port - `8002`
 
+## Add unit test
+
+To be able to run unit test via `mvn test` command, please create file `./core/src/test/java/testpackage/SampleTest.java` and add next content to it:
+```
+package testpackage;
+
+import org.junit.Test;
+
+import static org.junit.Assert.assertTrue;
+
+public class SampleTest {
+
+    @Test
+    public void testSomething() {
+        assertTrue(1 == 1);
+    }
+}
+```
+
+Add `junit 4.12` dependency to the module dependencies
+
 ## Deploy to Artifactory
 
 To deploy build artifacts through Artifactory you need to add a deployment element with the URL of a target local repository to which you want to deploy your artifacts. Please, use next next configuration example:
