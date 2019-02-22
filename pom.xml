@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.broadleafcommerce</groupId>
         <artifactId>broadleaf-boot-starter-parent</artifactId>
-        <version>5.2.9-SHAPSHOT</version>
+        <version>5.2.9-SNAPSHOT</version>
         <relativePath />
     </parent>
 
@@ -33,11 +33,9 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <google-closure-compiler.version>v20180506</google-closure-compiler.version>
-        
         <debug.args>-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=${debug.port}</debug.args>
         <boot.jvm.memory>-Xmx1536M</boot.jvm.memory>
         <boot.jvm.args>${boot.jvm.memory} ${debug.args}</boot.jvm.args>
-        
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.uri>${project.baseUri}</project.uri>
     </properties>
@@ -71,7 +69,7 @@
             </plugin>
         </plugins>
     </build>
-    
+
     <profiles>
         <profile>
             <id>jrebel</id>
