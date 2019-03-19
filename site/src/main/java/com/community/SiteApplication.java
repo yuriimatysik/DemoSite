@@ -20,15 +20,15 @@ public class SiteApplication extends SpringBootServletInitializer {
 	}
 
 }
-@EnableAutoConfiguration
-public class SiteApplication {
+// @EnableAutoConfiguration
+// public class SiteApplication {
 
-    @Configuration
-    @EnableBroadleafSiteAutoConfiguration
-    public static class BroadleafFrameworkConfiguration {}
+//     @Configuration
+//     @EnableBroadleafSiteAutoConfiguration
+//     public static class BroadleafFrameworkConfiguration {}
     
-    public static void main(String[] args) {
-        SpringApplication.run(SiteApplication.class, args);
-    }
+//     public static void main(String[] args) {
+//         SpringApplication.run(SiteApplication.class, args);
+//     }
     
-}
+// }
