@@ -18,7 +18,7 @@
     </properties>
     
     <build>
-        <finalName>ROOT</finalName>
+        <finalName>site</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
